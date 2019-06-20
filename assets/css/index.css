@@ -1,0 +1,62 @@
+/* css dari home dari admin*/
+.card-home {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #fc8675 !important;
+	padding: 0px 0px 30px 0px;
+	float: left;
+	color: white;
+}
+
+.card-home:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.space {
+	padding: 22px 16px;
+}
+
+.iconn {
+	font-size: 30px;
+	opacity: .3;
+}
+
+.space>h1 {
+	float: left;
+	margin-right: 130px;
+}
+
+/* css dari instansi */
+
+
+.info-table {
+	color: black;
+}
+
+.instansi>.card {
+	width: 50rem;
+}
+
+
+.info-table>tr>.field {
+	text-align: right;
+	width: 30%;
+	color: #858796;
+}
+
+/* css dari user */
+.user>.card {
+	width: 60rem;
+}
+
+.user,
+.table {
+	color: black;
+}
+
+/* css dari report */
+.report>.card {
+	width: 65rem;
+}
