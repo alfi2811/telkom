@@ -60,3 +60,12 @@
 .report>.card {
 	width: 65rem;
 }
+
+/* css dari surat */
+.surat>.card {
+	width: 62rem;
+}
+
+.fa-file {
+	color: #4e73df;
+}

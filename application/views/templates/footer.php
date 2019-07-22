@@ -39,7 +39,19 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(function() {
+        $('#datepicker').datepicker({
+            format: "yyyy/mm/dd",
+            autoclose: true,
+        });
+        $('#datepicker2').datepicker({
+            format: "yyyy/mm/dd",
+            autoclose: true,
+        });
+    });
+</script>
 <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->

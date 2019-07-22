@@ -11,7 +11,7 @@ class Auth extends CI_Controller
     }
     public function index()
     {
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+        $this->form_validation->set_rules('username', 'Username', 'required|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
         if ($this->form_validation->run() == false) {
             $data['judul'] = 'Login';
@@ -26,18 +26,19 @@ class Auth extends CI_Controller
 
     private function _login()
     {
-        $email = $this->input->post('email');
+        $email = $this->input->post('username');
         $password = $this->input->post('password');
 
-        $user = $this->db->get_where('admin', ['email' => $email])->row_array();
+        $user = $this->db->get_where('admin', ['username' => $email])->row_array();
 
         //jika user ada
         if ($user) {
 
             if ($password == $user['password']) {
                 $data = [
-                    'email' => $user['email'],
-                    'role_id' => $user['id']
+                    'username' => $user['username'],
+                    'role_id' => $user['id'],
+                    'last_login' => time(),
                 ];
                 $this->session->set_userdata($data);
                 if ($user['role'] == "admin") {
@@ -93,7 +94,7 @@ class Auth extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('username');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> You Have Been Logged Out!</div> ');
         redirect('auth');

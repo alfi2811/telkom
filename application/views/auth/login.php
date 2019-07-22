@@ -17,8 +17,8 @@
                                 <?= $this->session->flashdata('message'); ?>
                                 <form class="user" action="" method="post">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." value="<?= set_value('email') ?>">
-                                        <small class="form-text text-danger pl-3"><?= form_error('email'); ?></small>
+                                        <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Enter Usename Address..." value="<?= set_value('username') ?>">
+                                        <small class="form-text text-danger pl-3"><?= form_error('username'); ?></small>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
@@ -45,4 +45,4 @@
 
     </div>
 
-</div> 
+</div>
